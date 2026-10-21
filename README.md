@@ -18,33 +18,30 @@ While testing, **SGD consistently yielded poor accuracy and instability** on the
 
 ## 🧰 Requirements
 
-Python 3.8+
-
-+Transformers
-
-+Datasets
-
-+PyTorch
-
-+NumPy, pandas, matplotlib
+- Python 3.8+
+- Transformers
+- Datasets
+- PyTorch
+- NumPy, pandas, matplotlib
 
 Install them via:
 
+```bash
 pip install torch transformers datasets numpy pandas matplotlib
+```
 
 ## 📝 How to Run
 
+```python
 # Load dataset and tokenizer
 from datasets import load_dataset
 from transformers import AutoTokenizer
 
 dataset = load_dataset("glue", "sst2")
 tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+```
 
-# Then follow each notebook to run fine-tuning with a specific optimizer.
+Then follow each notebook (`BERT MODEL/`, `GPT MODEL/`) to run fine-tuning with a specific optimizer.
 
 ## 🤝 Contributing
 Pull requests and issue discussions are welcome. If you'd like to add more optimizers or other datasets, feel free to fork the repo!
-
-
-
